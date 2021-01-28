@@ -9,27 +9,32 @@
     </head>
     <body>
         <div class="body" ng-app="filteringInput">
-            <div class="container" ng-controller="MyCtrl">
-                <button class="apagarcep" onclick="document.getElementById('input-cep').value = ''">
-                    <i class="far fa-trash-alt" alt="Apagar CEP" title="Apagar CEP"></i>
-                </button>
-                <input id="input-cep" class="cep-input" type='text' cep-input ng-model="cepVal">
-                <button class="buscarcepp" id="buscarCep" onclick="buscaCep(cep)">
-                    <i class="fas fa-search-location" alt="Buscar CEP" title="Buscar CEP"></i>
-                </button>
+            <div class="flex-center-vertically">
+                <div class="inline" ng-controller="MyCtrl">
+                    <button class="apagarcep" onclick="document.getElementById('input-cep').value = ''">
+                        <i class="far fa-trash-alt" alt="Apagar CEP" title="Apagar CEP"></i>
+                    </button>
+                    <input id="input-cep" class="cep-input" type='text' cep-input ng-model="cepVal">
+                    <button class="buscarcepp" id="buscarCep" onclick="buscaCep(cep)">
+                        <i class="fas fa-search-location" alt="Buscar CEP" title="Buscar CEP"></i>
+                    </button>
+                </div>
+                <div class="" id="dadosCep">
+                        <p data-cep></p>
+                    <h2>Logradouro</h2>
+                        <p data-log></p>
+                    <h2>Bairro</h2>
+                        <p data-bairro></p>
+                    <h2>Localidade</h2>
+                        <p data-local></p>
+                    <h2>UF</h2>
+                        <p data-uf></p>
+                    <h2>DDD</h2>
+                        <p data-ddd></p>
+                </div>
             </div>
-            <div id="dadosCep">
-                    <p data-cep></p>
-                <h2>Logradouro</h2>
-                    <p data-log></p>
-                <h2>Bairro</h2>
-                    <p data-bairro></p>
-                <h2>Localidade</h2>
-                    <p data-local></p>
-                <h2>UF</h2>
-                    <p data-uf></p>
-                <h2>DDD</h2>
-                    <p data-ddd></p>
+            <div class="flex-center-vertically">
+                
             </div>
         </div>
             
