@@ -1,0 +1,93 @@
+body, html, .body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background:
+    linear-gradient(#96A4DF, #A6CEDE 90%);
+}
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+}
+.cep-input {
+  display: flex;
+  border: none;
+  width: 18vmax;
+  height: 7.7vh;
+  font-size: 3.5vmax;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.buscarcepp {
+  display: flex;
+  border: none;
+  width: 8vmax;
+  height: 8vh;
+  border-radius: 0 10px 10px 0;
+  font-size: 3.2vmax;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 255, 0, 0.4);
+  cursor: pointer;
+}
+.apagarcep {
+  display: flex;
+  border: none;
+  width: 8vmax;
+  height: 8vh;
+  border-radius: 10px 0 0 10px;
+  font-size: 3.2vmax;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+/*========== FOOTER ========== */
+
+.social-footer {
+  padding: 1rem;
+  background: #222;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.social-footer-left img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.social-footer-icons li {
+  text-decoration: none;
+  display: inline;
+  margin-left: 15px;
+}
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fab {
+  font-size: 3.3em;
+  color: #fff;
+}
+
+.social-footer .social-footer-icons .fab:hover {
+  color: #cb925c;
+  transition: color 0.2s ease-in;
+}
