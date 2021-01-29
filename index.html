@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./css/style-buscacep.css"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
         <title>📍 Busca CEP 🗺️</title>
-    </head>
+    </head> 
     <body>
         <div class="body" ng-app="filteringInput">
             <div class="flex-center-vertically">
@@ -14,12 +14,12 @@
                     <button class="apagarcep" onclick="document.getElementById('input-cep').value = ''">
                         <i class="far fa-trash-alt" alt="Apagar CEP" title="Apagar CEP"></i>
                     </button>
-                    <input id="input-cep" class="cep-input" type='text' cep-input ng-model="cepVal">
+                    <input id="input-cep" class="cep-input" type='text' cep-input ng-model="cepVal" placeholder="Digite o CEP" title="Somente Números">
                     <button class="buscarcepp" id="buscarCep" onclick="buscaCep(cep)">
                         <i class="fas fa-search-location" alt="Buscar CEP" title="Buscar CEP"></i>
-                    </button>
-                </div>
-                <div class="" id="dadosCep">
+                    </button> 
+                </div> 
+                <div class="endereco" id="dadosCep">
                         <p data-cep></p>
                     <h2>Logradouro</h2>
                         <p data-log></p>
@@ -37,18 +37,19 @@
                 
             </div>
         </div>
-            
-        <footer class="social-footer">
-            <div class="social-footer-left">
-                <a href="https://viniciusad.com"><img class="logo" src="https://viniciusad.com/src/media/perfil.jpg"></a>
-            </div>
-            <div class="social-footer-icons">
-                <ul class="menu simple">
-                    <li><a href="https://www.linkedin.com/in/viniciusad/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="https://github.com/viniciusad" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        <footer class="footer">
+            <div class="footer-center">
+                <div class="author">
+                    <p><a href="https://viniciusad.com" target="_blank" alt="Clique para mais projetos" title="Clique para mais projetos"><i class="fas fa-code"></i>by Vinicius<i class="fas fa-globe"></i></a></p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/in/viniciusad/" target="_blank" alt="Linkedin" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li><a href="https://github.com/viniciusad" target="_blank" alt="Github" title="Github"><i class="fab fa-github"></i><a>
+                    </li>
                 </ul>
             </div>
-        </footer>
+        </footer> 
         <script src="./js/filteringInput.js"></script>
         <script src="./js/buscaCep.js"></script>
     </body>

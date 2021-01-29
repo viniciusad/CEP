@@ -13,6 +13,13 @@ function handleClick(event) {
   buscaCep(cep)
 }
 
+var input = document.getElementById('input-cep');
+input.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+  const cep = inputCep.value;
+  buscaCep(cep)
+  }
+})
 
 function buscaCep(cep) {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)

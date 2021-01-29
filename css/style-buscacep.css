@@ -1,4 +1,5 @@
 body, html, .body{
+    margin: 0 auto;
   height: 100%;
   width: 100%;
   font-family: "Rubik", sans-serif;
@@ -13,21 +14,30 @@ body{
   justify-content: center;
 }
 .flex-center-vertically {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  height: 400px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .inline {
   display: flex;
-  vertical-align: middle;
-  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .cep-input {
   display: flex;
   border: none;
-  width: 18vmax;
+  width: 50%;
   height: 7.7vh;
   font-size: 3.5vmax;
   text-align: center;
@@ -60,52 +70,80 @@ body{
   background-color: rgba(255, 0, 0, 0.4);
   cursor: pointer;
 }
-#dadosCep h2 {
-  font-size: 1.4rem;
+.endereco {
+    margin: 10px;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.endereco h2 {
+  font-size: 1.4em;
   font-weight: 400;
-  margin-top: 8px;
+  margin: 0 auto;
   color: #000;
 }
-#dadosCep p {
-  font-size: 2rem;
+.endereco p {
+  font-size: 1em;
+  margin: 0 0 0 5px auto;
   color: #000;
 }
 
 /*========== FOOTER ========== */
-
-.social-footer {
-  padding: 1rem;
-  background: #222;
+.footer {
+    margin: 0;
+  float: bottom;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+}
+.footer-center {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: space-between;
+  -webkit-justify-content: center;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
 }
-.social-footer-left img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-.social-footer-icons li {
+.footer-center p {
+  font-size: 0.9em;
+  color: white;
   text-decoration: none;
-  display: inline;
-  margin-left: 15px;
 }
-.social-footer .social-footer-icons li:last-of-type {
-  margin-right: 0;
+.footer-center i {
+  font-size: 1.5em;
+  color: white;
+  padding: 0 10px;
+  text-decoration: none;
 }
-
-.social-footer .social-footer-icons .fab {
-  font-size: 3.3em;
-  color: #fff;
+.footer-center a {
+    text-decoration: none;
+    color: white;
 }
-
-.social-footer .social-footer-icons .fab:hover {
-  color: #cb925c;
-  transition: color 0.2s ease-in;
+.author i {
+  font-size: 0.8em;
+}
+.author p {
+    font-size: 0.9em;
+}
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.social-links a {
+    text-decoration: none;
+    color: white;
+}
+.social-links li {
+    list-style: none;
 }
