@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
 body, html, .body{
     margin: 0 auto;
   height: 100%;
@@ -6,7 +8,7 @@ body, html, .body{
 }
 body{
   background:
-    linear-gradient(#96A4DF, #A6CEDE 90%);
+    linear-gradient(#A6CEDE, #96A4DF 90%);
 }
 .body{
   display: flex;
@@ -28,7 +30,7 @@ body{
 }
 .inline {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -50,11 +52,11 @@ body{
   width: 8vmax;
   height: 8vh;
   border-radius: 0 10px 10px 0;
-  font-size: 3.2vmax;
+  font-size: 3vmax;
   text-align: center;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 255, 0, 0.4);
+  background-color: rgba(0, 255, 0, 0.3);
   cursor: pointer;
 }
 .apagarcep {
@@ -63,14 +65,19 @@ body{
   width: 8vmax;
   height: 8vh;
   border-radius: 10px 0 0 10px;
-  font-size: 3.2vmax;
+  font-size: 3vmax;
   text-align: center;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.3);
   cursor: pointer;
 }
+.buscarcepp:hover, .apagarcep:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
 .endereco {
+    padding: 15px;
     margin: 10px;
     width: 70%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -85,14 +92,30 @@ body{
 }
 .endereco h2 {
   font-size: 1.4em;
-  font-weight: 400;
+  font-weight: 800;
   margin: 0 auto;
   color: #000;
 }
 .endereco p {
   font-size: 1em;
-  margin: 0 0 0 5px auto;
+  font-weight: 400;
+  margin: 0 auto;
   color: #000;
+}
+#copyButton {
+    text-align: center;
+    font-size: 1em;
+    color: #000;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+#copyButton:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
 }
 
 /*========== FOOTER ========== */

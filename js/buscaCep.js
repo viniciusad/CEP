@@ -1,10 +1,6 @@
-
-//======================SEARCH CEP==========================//
 const inputCep = document.getElementById('input-cep');
 const btnCep = document.getElementById('buscarCep');
-
-//=================FORMATA CEP=================//
-
+//======================BUSCA CEP==========================//
 btnCep.addEventListener('click', handleClick);
 
 function handleClick(event) {
@@ -12,14 +8,6 @@ function handleClick(event) {
   const cep = inputCep.value;
   buscaCep(cep)
 }
-
-var input = document.getElementById('input-cep');
-input.addEventListener('keyup', function(event) {
-  if (event.keyCode === 13) {
-  const cep = inputCep.value;
-  buscaCep(cep)
-  }
-})
 
 function buscaCep(cep) {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -37,3 +25,31 @@ function buscaCep(cep) {
     })
 }
 
+//=================COPIA ENDEREÇO=================//
+function copiaEndereco() {
+  var copyText = document.getElementById('dadosCep');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  alert('Endereço copiado... ' + copyText.value);
+}
+
+//======================LIMPA CEP==========================//
+function limpaCep() {
+document.getElementById('input-cep').value = '';
+document.getElementsById('dcep').value = '';
+}
+
+//=================CONFIG TECLAS=================//
+var input = document.getElementById('input-cep');
+input.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+  const cep = inputCep.value;
+  buscaCep(cep)
+  } else {
+    if (event.keyCode === 46) {
+    const cep = inputCep.value;
+    limpaCep()
+        }
+    }
+})
