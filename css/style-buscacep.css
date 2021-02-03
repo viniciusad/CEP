@@ -58,6 +58,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.5s ease;
   background-color: rgba(0, 255, 0, 0.3);
   cursor: pointer;
 }
@@ -71,13 +72,15 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.5s ease;
   background-color: rgba(255, 0, 0, 0.3);
   cursor: pointer;
 }
-.buscarcepp:hover,
+.buscarcepp:hover {
+    background-color: green;
+}
 .apagarcep:hover {
-  transform: scale(1.1);
-  transition-duration: 0.3s;
+    background-color: red;
 }
 .endereco {
   padding: 15px;
@@ -85,13 +88,14 @@ body {
   width: 70%;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  margin: 0 0 85px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   text-align: center;
-  box-sizing: border-box;
-  overflow: hidden;
+  box-sizing: flex;
+  overflow: auto;
 }
 .endereco h2 {
   font-size: 1.4em;
@@ -105,26 +109,40 @@ body {
   margin: 0 auto;
   color: #000;
 }
+#erro {
+    font-size: 1.1em;
+    font-weight: 800;
+    color: rgba(255, 0, 0, 0.9);
+    padding: 8px 0;
+    margin: 0;
+}
 #copyButton {
   text-align: center;
   font-size: 1em;
   color: #000;
   border: none;
+  margin: 8px;
   padding: 3px;
+  letter-spacing: 1.5px;
   border-radius: 5px;
   height: 30px;
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  justify-content: center;
 }
 #copyButton:hover {
   transform: scale(1.1);
   transition-duration: 0.3s;
+}
+.fa-copy {
+    padding: 0 5px;
 }
 
 /*========== FOOTER ========== */
 .footer {
   font-family: "Rubik", sans-serif;
   color: white;
+  padding: 0;
   margin: 0;
   position: fixed;
   left: 0;
@@ -148,6 +166,8 @@ body {
 .footer p {
   color: white;
   text-decoration: none;
+  padding: 3px;
+  margin: 0;
 }
 .footer i {
   color: white;
@@ -163,6 +183,13 @@ body {
 }
 .author a {
   font-size: 0.9em;
+}
+.footer p:hover, 
+.footer a:hover, 
+.footer i:hover {
+    transform: scale(1.2);
+    transition: all .2s ease-in-out;
+    color: #96a4df;
 }
 .social-links {
   display: flex;

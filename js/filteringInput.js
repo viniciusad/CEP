@@ -38,15 +38,15 @@ filteringInput.directive('cepInput', function($filter, $browser) {
 
     };
 });
-filteringInput.filter('cepp', function () {
-    return function (cepp) {
-        console.log(cepp);
-        if (!cepp) { return ''; }
+filteringInput.filter('cep', function () {
+    return function (cep) {
+        console.log(cep);
+        if (!cep) { return ''; }
 
-        var value = cepp.toString().trim().replace(/^\+/, '');
+        var value = cep.toString().trim().replace(/^\+/, '');
 
         if (value.match(/[^0-9]/)) {
-            return cepp;
+            return cep;
         }
 
         var cep1, cep2;

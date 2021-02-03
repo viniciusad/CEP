@@ -8,17 +8,23 @@
         <title>📍 Busca CEP 🗺️</title>
     </head>
     <body> 
-        <div class="body" ng-app="filteringInput">
+        <div class="body">
             <div class="flex-center-vertically">
-                <div class="inline" ng-controller="MyCtrl">
+                <div class="inline">
                     <button class="apagarcep" onclick="limpaCep()">
                         <i class="far fa-trash-alt" alt="Apagar CEP" title="Apagar CEP"></i>
                     </button>
-                    <input id="input-cep" class="cep-input" type='text' cep-input ng-model="cepVal" placeholder="Digite o CEP" title="Somente Números" maxlength="8" pattern="[0-9]{8}">
+                <input id="input-cep" class="cep-input" type='text' placeholder="Digite o CEP" title="Somente Números" maxlength="8" onkeyup="buscaCep()" autofocus required>
                     <button class="buscarcepp" id="buscarCep" onclick="buscaCep(cep)">
                         <i class="fas fa-search-location" alt="Buscar CEP" title="Buscar CEP"></i>
                     </button> 
                 </div>
+                    <p class="erro" id="erro"></p>
+                <div class="inline">
+                        <button id="copyButton"> 
+                        <i class="far fa-copy" alt="Copy to clipboard"></i>Copiar
+                        </button> 
+                    </div>
                 <div class="endereco" id="dadosCep"> 
                     <h2>CEP</h2>
                         <p data-cep id="dcep"></p>
@@ -32,11 +38,6 @@
                         <p data-uf id="dcep"></p>
                     <h2>DDD</h2>
                         <p data-ddd id="dcep"></p>
-                </div>
-                <div class="inline">
-                    <button id="copyButton"> 
-                    <i class="far fa-copy" alt="Copy to clipboard"></i>Copiar Endereço
-                    </button> 
                 </div>
             </div>
         </div>
@@ -59,17 +60,6 @@
             </ul>
         </footer>
             <!-- 3. Instantiate clipboard by passing a HTML element -->
-        <script>
-        var clipboard = new ClipboardJS('.btn');
-
-        clipboard.on('success', function (e) {
-            console.log(e);
-        });
-
-        clipboard.on('error', function (e) {
-            console.log(e);
-        });
-        </script>
         <script src="./js/filteringInput.js"></script>
         <script src="./js/buscaCep.js"></script>
         <script src="./js/CopytoClipboard.js"></script>
